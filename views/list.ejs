@@ -16,6 +16,18 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
         </div>
         <div class="col-8 border border-info rounded py-3">
             <h1 class="text-center">Look at those quotes!</h1>
+            <% for(var quote of quotes.reverse()){ %>
+                <p class="mb-0">"<%= quote.what%>"</p>
+                <p>
+                     - <span class="text-success">
+                         <%= quote.who%>
+                     </span>
+                     @
+                     <span class="text-primary">
+                         <%= quote.createdAt%>
+                     </span>
+                </p>
+            <% } %>
         </div>
         <div class="col"></div>
     </div>
